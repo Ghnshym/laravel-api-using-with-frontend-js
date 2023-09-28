@@ -1,3 +1,9 @@
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const registerForm = document.getElementById("registerForm");
     const message = document.getElementById("message");
