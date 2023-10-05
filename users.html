@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="dataContainer">
-        <!-- Data will be displayed here -->
+        
     </div>
 
     
@@ -28,11 +28,8 @@
             data.forEach((item, index) => {
                 const listItem = document.createElement('li');
                 listItem.textContent = `User ${index + 1}:`;
-                
-                // Create a nested list to display user details
+               
                 const userDetailsList = document.createElement('ul');
-
-                // Add user details as list items
                 const nameItem = document.createElement('li');
                 nameItem.textContent = `ID: ${item.id}`;
                 
@@ -42,15 +39,12 @@
                 const phoneItem = document.createElement('li');
                 phoneItem.textContent = `Email: ${item.email}`;
                 
-                // Append user details list items to the nested list
                 userDetailsList.appendChild(nameItem);
                 userDetailsList.appendChild(emailItem);
                 userDetailsList.appendChild(phoneItem);
 
-                // Append the nested list to the main list item
                 listItem.appendChild(userDetailsList);
 
-                // Append the main list item to the container
                 container.appendChild(listItem);
             });
             } catch (error) {

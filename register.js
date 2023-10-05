@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const registerURL = "http://127.0.0.1:8000/api/register";
 
-    // Registration form submission
     registerForm.addEventListener("submit", async (e) => {
         e.preventDefault();
         const name = document.getElementById("registerName").value;
@@ -23,10 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
 
             if (response.ok) {
-                // Handle successful registration (e.g., show a success message)
                 message.innerHTML = "Registration successful! Redirecting to login page...";
                 
-                // Redirect to login.html after a brief delay (e.g., 2 seconds)
                 setTimeout(() => {
                     window.location.href = "login.html";
                 }, 2000);
